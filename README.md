@@ -119,4 +119,4 @@ this is a modern project built with modern tools.
 
 ## license
 
-this project is licensed under the mit license. you can find the full license text in the [license](license) file.
+this project is licensed under the mit license. you can find the full license text in the [license](LICENSE) file.
