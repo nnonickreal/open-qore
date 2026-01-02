@@ -1,6 +1,7 @@
 <h1 align="center">
   openqore
-  <img src=".github/open-qore-logo.png" width="50" alt="open-qore logo" style="position: relative; top: 300px;"> 
+  <br>
+  <img src=".github/open-qore-logo.png" width="50" alt="open-qore logo"> 
 </h1>
 
 an open-source toolkit to patch, modify, and enhance the firmware of soundcore q-series headphones, with future support for other models planned.
