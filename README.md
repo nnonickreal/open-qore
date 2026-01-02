@@ -52,8 +52,8 @@ the firmware appears to be a monolithic binary divided into multiple sections. e
 *   **modded:** by patching the functions responsible for initializing the audio dac, it's possible to force the system to play back audio at `48khz`. this significantly improves the quality of custom sounds. stereo support is a work-in-progress (wip).
 
 #### key components & interfaces
-*   **chipset:** the heart of the q35 is a bestechnic (bes) `bes2300` series soc. a datasheet can be found with some googling.
-*   **debug port:** a `uart` serial port is available on the pcb, which was used for initial debugging and is the primary method for unbricking a device after a bad flash. the `bes2300` chip itself has two uart ports, but only one of them is exposed as easily accessible pads on the pcb.
+*   **chipset:** the heart of the q35 is a bestechnic (bes, best) `bes2300p` soc. a datasheet can be found with some googling.
+*   **debug port:** a `uart` serial port is available on the pcb, which was used for initial debugging and is the primary method for unbricking a device after a bad flash. the `bes2300p` chip itself has two uart ports, but only one of them is exposed as easily accessible pads on the pcb.
 
 </details>
 
