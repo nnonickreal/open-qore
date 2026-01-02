@@ -35,12 +35,14 @@ this project was started with the soundcore life q35. support for other devices 
 this guide assumes you have `python` and `git` installed on your system.
 
 **1. clone the repository**
+
 open your terminal and run this command:
 ```
 git clone https://github.com/nnonickreal/openqore.git
 ```
 
 **2. install dependencies**
+
 navigate to the patcher directory and install the required python libraries:
 ```
 cd openqore/patcher
@@ -48,6 +50,7 @@ pip install -r requirements.txt
 ```
 
 **3. get your firmware file**
+
 this is the hardest part. currently, you need to dump the flash memory using a uart adapter and [bestool by ralim](https://github.com/Ralim/bestool). reading the flash via ota (over-the-air) is planned for a future update.
 
 ////**quick start is a WIP!**////
