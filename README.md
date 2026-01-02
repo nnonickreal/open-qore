@@ -35,11 +35,12 @@ this project was started with the soundcore life q35. support for other devices 
 openqore is just getting started. here's a rough plan of what's coming next:
 
 - [x] initial firmware patcher for sound replacement.
-- [x] unlock 48khz for system sounds.
-- [ ] unlock stereo for system sounds.
-- [ ] delete low volume limitations when connected via jack (gate effect)
+- [x] unlock 48khz audio support for system sounds.
+- [ ] investigate and unlock stereo support for system sounds.
+- [ ] implement patches for headphone name and mac address modification.
+- [ ] remove the low volume limiter/gate on the aux input (jack connection).
 - [ ] create a user-friendly gui for the patcher.
-- [ ] reverse-engineer the ota (over-the-air) update protocol for wireless updating.
+- [ ] reverse-engineer the ota (over-the-air) update protocol for wireless flashing.
 - [ ] document the firmware structure and key functions.
 - [ ] develop a library of community-created sound packs.
 
@@ -115,3 +116,7 @@ don't forget to give the project a star! thanks again!
 this project was brought to life with the extensive use of ai-powered coding assistants (like claude and chatgpt). while the core reverse-engineering, research, and architectural decisions were made by the author, ai played a crucial role in accelerating the development process, writing boilerplate code, and debugging.
 
 this is a modern project built with modern tools.
+
+## license
+
+this project is licensed under the mit license. you can find the full license text in the [license](license) file.
