@@ -21,7 +21,8 @@ this project was started with the soundcore life q35. support for other devices 
 | soundcore life q30 | bes2300p | ❔ *untested, but should work* |
 | soundcore life tune pro | bes2300p | ❔ *untested, but should work* |
 | soundcore life tune | bes2300p | ❔ *untested, but should work* |
-other models are unsupported for now
+
+**support for other models is a future goal!**
 
 > **note:** devices based on the `bes2300p` chipset are the most likely candidates for future support.
 
