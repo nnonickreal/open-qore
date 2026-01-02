@@ -30,6 +30,33 @@ this project was started with the soundcore life q35. support for other devices 
 
 > **note:** devices based on the `bes2300p` chipset are the most likely candidates for future support.
 
+## technical deep dive
+
+<details>
+<summary>nerd stuff ahead: click to expand...</summary>
+
+this section contains some of the initial findings from reverse-engineering the q35 firmware.
+
+#### having fun with engineering modes
+the headphones have several hidden test modes. some of them could be useful for future updates or debugging.
+
+*   **engineering mode:** to enter this mode, hold the power button, connect the headphones to a pc via usb-c *before* they turn on, and wait for them to power up. once connected via bluetooth, the headphones will expose two serial com ports. one of them is writable. so far, the only function i've managed to trigger through this port is a factory reset. this seems to be a security measure, as it was triggered by brute-forcing various hex codes rather than a specific command. interestingly, this is not the standard reset (power + vol+) but something different.
+
+*   **testing mode:** this mode is entered similarly to engineering mode, but you need to release the power button immediately after the white led flashes for the first time, *before the blue light*. the headphones will then appear on the pc as a device with a "device descriptor request failed" error. you can confirm you're in this mode by the white led, which blinks faster than usual. its purpose is likely related to firmware flashing. also, in this mode, the headphones can be powered on while charging!
+
+#### firmware structure
+the firmware appears to be a monolithic binary divided into multiple sections. each critical section is protected by a `crc32` checksum. future patchers will automatically recalculate these checksums after any modification to prevent boot failures.
+
+#### audio system
+*   **stock:** the original system sounds are stored as `16khz, mono, 16-bit PCM` audio streams, likely encoded with SBC for transport but stored raw.
+*   **modded:** by patching the functions responsible for initializing the audio dac, it's possible to force the system to play back audio at `48khz`. this significantly improves the quality of custom sounds. stereo support is a work-in-progress (wip).
+
+#### key components & interfaces
+*   **chipset:** the heart of the q35 is a bestechnic (bes) `bes2300` series soc. a datasheet can be found with some googling.
+*   **debug port:** a `uart` serial port is available on the pcb, which was used for initial debugging and is the primary method for unbricking a device after a bad flash. the `bes2300` chip itself has two uart ports, but only one of them is exposed as easily accessible pads on the pcb.
+
+</details>
+
 ## acknowledgements
 
 this project was brought to life with the extensive use of ai-powered coding assistants (like claude and chatgpt). while the core reverse-engineering, research, and architectural decisions were made by the author, ai played a crucial role in accelerating the development process, writing boilerplate code, and debugging.
