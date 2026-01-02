@@ -30,6 +30,19 @@ this project was started with the soundcore life q35. support for other devices 
 
 > **note:** devices based on the `bes2300p` chipset are the most likely candidates for future support.
 
+## roadmap
+
+openqore is just getting started. here's a rough plan of what's coming next:
+
+- [x] initial firmware patcher for sound replacement.
+- [x] unlock 48khz for system sounds.
+- [ ] unlock stereo for system sounds.
+- [ ] delete low volume limitations when connected via jack (gate effect)
+- [ ] create a user-friendly gui for the patcher.
+- [ ] reverse-engineer the ota (over-the-air) update protocol for wireless updating.
+- [ ] document the firmware structure and key functions.
+- [ ] develop a library of community-created sound packs.
+
 ## quick start
 
 this guide assumes you have `python` and `git` installed on your system.
@@ -83,6 +96,19 @@ the firmware appears to be a monolithic binary divided into multiple sections. e
 *   **debug port:** a `uart` serial port is available on the pcb, which was used for initial debugging and is the primary method for unbricking a device after a bad flash. the `bes2300p` chip itself has two uart ports, but only one of them is exposed as easily accessible pads on the pcb.
 
 </details>
+
+## contributing
+
+contributions are what make the open source community such an amazing place to learn, inspire, and create. any contributions you make are **greatly appreciated**.
+
+if you have a suggestion that would make this better, please fork the repo and create a pull request. you can also simply open an issue with the tag "enhancement".
+don't forget to give the project a star! thanks again!
+
+1.  fork the project.
+2.  create your feature branch (`git checkout -b feature/amazing-feature`).
+3.  commit your changes (`git commit -m 'feat: add some amazing feature'`).
+4.  push to the branch (`git push origin feature/amazing-feature`).
+5.  open a pull request.
 
 ## acknowledgements
 
