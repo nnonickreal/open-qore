@@ -30,6 +30,16 @@ this project was started with the soundcore life q35. support for other devices 
 
 > **note:** devices based on the `bes2300p` chipset are the most likely candidates for future support.
 
+## quick start
+
+this guide assumes you have `python` and `git` installed on your system.
+
+**1. clone the repository**
+open your terminal and run this command:
+```
+git clone https://github.com/nnonickreal/openqore.git
+```
+
 ## technical deep dive
 
 <details>
