@@ -51,7 +51,7 @@ pip install -r requirements.txt
 
 **3. get your firmware file**
 
-this is the hardest part. currently, you need to dump the flash memory using a uart adapter and [bestool by ralim](https://github.com/Ralim/bestool). reading the flash via ota (over-the-air) is planned for a future update.
+this is the hardest part. currently, you need to dump the flash memory using a uart adapter and [bestool by ralim](https://github.com/Ralim/bestool). reading the flash via ota (over-the-air) is planned for a future update. (if it's possible :D)
 
 ////**quick start is a WIP!**////
 
