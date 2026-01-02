@@ -1,5 +1,4 @@
 <h1 align="center">
-  <br>
   openqore
   <img src=".github/open-qore-logo.png" width="100" alt="open-qore logo" align="center">
 </h1>
