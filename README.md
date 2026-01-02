@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/open-qore-logo.png" width="200" alt="open-qore logo">
+  <img src=".github/open-qore-logo.png" width="100" alt="open-qore logo">
 </p>
 
 <h1 align="center">openqore</h1>
