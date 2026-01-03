@@ -36,7 +36,7 @@ currently, the primary feature of openqore is replacing the stock system sounds.
 
 ### step 2: run the patcher
 
-1.  open your terminal in the `open-qore` project directory.
+1.  open your terminal in the `open-qore/patcher` directory.
 2.  run the script using the command:
     ```
     python open-qore.py
