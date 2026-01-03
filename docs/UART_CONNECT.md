@@ -31,5 +31,6 @@ once the pads are clean, connect them to your uart adapter in a crossover config
 *   **vcc:** do **not** connect the vcc pin! the headphones are powered by their own battery.
 *   **gnd (ground):** for a reliable ground connection, it is recommended to solder the gnd wire to the metal shield of the usb-c port on the pcb.
 
-congratulations, you're connected! if you want to explore the capabilities of this port, check out the [bestool project by ralim](https://github.com/Ralim/BesTool).
+congratulations, you're connected! if you want to read and write the firmware, check out the [bestool by ralim](https://github.com/Ralim/bestool).
+
 sending funny commands on this port is a WIP.

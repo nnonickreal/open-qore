@@ -8,7 +8,7 @@ currently, the primary feature of openqore is replacing the stock system sounds.
 
 ### prerequisites
 
-1.  **your firmware dump:** for now, you must have a firmware dump from your **own** pair of headphones. flashing a firmware dump from another device can lead to malfunctions, as some calibration data is unique to each unit.
+1.  **your firmware dump:** currently, you must have a [firmware dump](UART_CONNECT.md) from your **own** pair of headphones. flashing a firmware dump from another device can lead to malfunctions, as some calibration data is unique to each unit.
 2.  **custom sounds:** prepare the audio files you want to use. they can be in `.wav`.
 
     > **tip:** you can use my custom minimal sound pack available in the `sound_packs` directory as a starting point!

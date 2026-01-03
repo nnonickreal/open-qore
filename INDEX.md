@@ -3,7 +3,6 @@
 welcome to the documentation for openqore. here you'll find all the guides and technical information about the project.
 
 ## user guides
-- [installation guide](docs/INSTALL.md)
 - [usage guide](docs/USAGE.md)
 
 ## recovering the firmware & having fun with it
