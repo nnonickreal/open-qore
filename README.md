@@ -56,7 +56,7 @@ this guide assumes you have `python` and `git` installed on your system.
 
 open your terminal and run this command:
 ```
-git clone https://github.com/nnonickreal/openqore.git
+git clone https://github.com/nnonickreal/open-qore.git
 ```
 
 **2. install dependencies**
