@@ -16,7 +16,7 @@ an open-source toolkit to patch, modify, and enhance the firmware of soundcore q
 </p>
 
 <p align="center">
-  <strong><a href="DOCUMENTATION.md">📚 read the full documentation 📚</a></strong>
+  <strong><a href="INDEX.md">📚 read the full documentation 📚</a></strong>
 </p>
 
 ## supported devices
@@ -124,6 +124,14 @@ don't forget to give the project a star! thanks again!
 <p align="left">
   <a href="https://t.me/nnonick" target="_blank"><img src="https://img.shields.io/badge/telegram-%40nnonick-2CA5E0?style=for-the-badge&logo=telegram" alt="telegram"></a>
   <a href="https://discord.gg/tQmc5qgfEg" target="_blank"><img src="https://img.shields.io/badge/discord-join_chat-5865F2?style=for-the-badge&logo=discord" alt="discord server"></a>
+</p>
+
+## ❤️ support the project
+
+if you find this project helpful and want to support its future development, you can treat me to a coffee or some snacks via boosty! every contribution is greatly appreciated and helps me dedicate more time to openqore.
+
+<p>
+  <a href="https://boosty.to/nnonick" target="_blank"><img src="https://img.shields.io/badge/support_me_on-boosty-FF8100?style=for-the-badge&logo=boosty&logoColor=white" alt="Boosty"></a>
 </p>
 
 ## acknowledgements
