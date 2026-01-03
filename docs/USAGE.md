@@ -47,4 +47,4 @@ currently, the primary feature of openqore is replacing the stock system sounds.
 
 congratulations! a new file named `firmware_patched.bin` has been created. this new firmware contains your custom sounds, and the system audio sample rate has been upgraded from 16khz to 48khz for improved quality.
 
-now you can flash this file back to your headphones.
+now you can [flash](FLASHING.md) this file back to your headphones.
