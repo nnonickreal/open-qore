@@ -61,10 +61,21 @@ git clone https://github.com/nnonickreal/openqore.git
 
 **2. install dependencies**
 
-navigate to the patcher directory and install the required python libraries:
+the patcher requires ffmpeg for audio conversion:
+**windows:** 
+download [here](https://ffmpeg.org/download.html) or:
 ```
-cd openqore/patcher
-pip install -r requirements.txt
+winget install ffmpeg
+```
+
+**macos:**
+```
+brew install ffmpeg
+```
+
+**ubuntu/debian:**
+```
+sudo apt install ffmpeg
 ```
 
 **3. get your firmware file**
@@ -75,7 +86,9 @@ this is the hardest part. currently, you need to dump the flash memory using a h
 
 reading the flash via ota (over-the-air) is planned for a future update. (if it's possible :D)
 
-////**quick start is a WIP!**////
+**4. congrats!**
+
+you can find usage instructions [here](docs/USAGE.md)
 
 ## technical deep dive
 
