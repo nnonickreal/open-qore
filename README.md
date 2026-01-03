@@ -62,6 +62,7 @@ git clone https://github.com/nnonickreal/openqore.git
 **2. install dependencies**
 
 the patcher requires ffmpeg for audio conversion:
+
 **windows:** 
 download [here](https://ffmpeg.org/download.html) or:
 ```
