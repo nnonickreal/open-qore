@@ -18,7 +18,7 @@ disassembling the left earcup is straightforward:
 
 here is the pinout for the tx and rx pads on the left earcup's pcb:
 
-<img src=".github/assets/uart_pins.jpg" width="200" alt="uart pins">
+<img src="/.github/assets/uart_pins.jpg" width="200" alt="uart pins">
 
 #### removing the glue
 **important:** the uart pads are often covered with a layer of hot glue from the factory for insulation. you will need to carefully remove this glue before you can solder.
