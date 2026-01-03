@@ -89,7 +89,7 @@ the headphones have several hidden test modes. some of them could be useful for 
 the firmware appears to be a monolithic binary divided into multiple sections. each critical section is protected by a `crc32` checksum. future patchers will automatically recalculate these checksums after any modification to prevent boot failures.
 
 #### audio system
-*   **stock:** the original system sounds are stored as `16khz, mono, 16-bit PCM` audio streams, likely encoded with SBC for transport but stored raw.
+*   **stock:** the original system sounds are stored as `16khz, mono, SBC` audio streams.
 *   **modded:** by patching the functions responsible for initializing the audio dac, it's possible to force the system to play back audio at `48khz`. this significantly improves the quality of custom sounds. stereo support is a work-in-progress (wip).
 
 #### key components & interfaces
