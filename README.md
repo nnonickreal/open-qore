@@ -15,6 +15,10 @@ an open-source toolkit to patch, modify, and enhance the firmware of soundcore q
   <a href="https://github.com/nnonickreal/OpenQore/issues"><img src="https://img.shields.io/github/issues/nnonickreal/OpenQore?style=for-the-badge" alt="Issues"></a>
 </p>
 
+<p align="center">
+  <strong><a href="DOCUMENTATION.md">📚 read the full documentation 📚</a></strong>
+</p>
+
 ## supported devices
 
 this project was started with the soundcore life q35. support for other devices is a community goal. if you want to help test or add support for a new model, please open an issue!
@@ -65,7 +69,11 @@ pip install -r requirements.txt
 
 **3. get your firmware file**
 
-this is the hardest part. currently, you need to dump the flash memory using a uart adapter and [bestool by ralim](https://github.com/Ralim/bestool). reading the flash via ota (over-the-air) is planned for a future update. (if it's possible :D)
+this is the hardest part. currently, you need to dump the flash memory using a hardware method. a detailed guide for connecting a uart adapter is available here:
+
+[➡️ hardware guide: connecting via uart](docs/UART_CONNECT.md)
+
+reading the flash via ota (over-the-air) is planned for a future update. (if it's possible :D)
 
 ////**quick start is a WIP!**////
 
