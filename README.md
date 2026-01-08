@@ -21,14 +21,14 @@ an open-source toolkit to patch, modify, and enhance the firmware of soundcore q
 
 ## supported devices
 
-this project was started with the soundcore life q35. support for other devices is a community goal. if you want to help test or add support for a new model, please open an issue!
+this project was started with the soundcore life q35. if you want to help test or add support for a new model, please open an issue!
 
 | model | chipset | status |
 | :--- | :--- | :--- |
 | soundcore life q35 | bes2300p | ✅ **supported** |
-| soundcore life q30 | bes2300p | ❔ *untested, but should work* |
-| soundcore life tune pro | bes2300p | ❔ *untested, but should work* |
-| soundcore life tune | bes2300p | ❔ *untested, but should work* |
+| soundcore life q30 | bes2300p | ❌ *WIP* |
+| soundcore life tune pro | bes2300p | ❌ *WIP* |
+| soundcore life tune | bes2300p | ❌ *WIP* |
 
 **support for other models is a future goal!**
 
@@ -42,7 +42,7 @@ openqore is just getting started. here's a rough plan of what's coming next:
 - [x] unlock 48khz audio support for system sounds.
 - [ ] investigate and unlock stereo support for system sounds.
 - [ ] implement patches for headphone name and mac address modification.
-- [ ] remove the low volume limiter/gate on the aux input (jack connection).
+- [ ] remove the low volume limiter/gate on the aux input on some models (jack connection).
 - [ ] create a user-friendly gui for the patcher.
 - [ ] reverse-engineer the ota (over-the-air) update protocol for wireless flashing.
 - [ ] document the firmware structure and key functions.
