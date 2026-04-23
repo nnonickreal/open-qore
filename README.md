@@ -3,7 +3,7 @@
   <br>
   <img src=".github/open-qore-logo.png" width="50" alt="open-qore logo"> 
 </h1>
-
+⚠️**flashing instructions are restricted while there is a pending response regarding a discovered security vulnerability**
 an open-source toolkit to patch, modify, and enhance the firmware of soundcore q-series headphones, with future support for other models planned.
 
 > **note:** this project is my personal journey into the world of hardware reverse-engineering and embedded systems. it was created by a teenager and i'm learning as i go. expect bugs, mistakes, and lots of fun. all contributions and advice are welcome!
