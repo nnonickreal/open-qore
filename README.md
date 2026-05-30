@@ -3,7 +3,6 @@
   <!-- <br> -->
   <!-- <img src=".github/open-qore-logo.png" width="50" alt="open-qore logo">  -->
 </h1>
-<p>⚠️ flashing instructions are restricted while there is a pending response regarding a discovered security vulnerability!!!</p>
 
 an open-source toolkit to patch, modify, and enhance the firmware of soundcore q-series headphones, with future support for other models planned.
 
@@ -16,6 +15,16 @@ an open-source toolkit to patch, modify, and enhance the firmware of soundcore q
   <a href="https://github.com/nnonickreal/OpenQore/issues"><img src="https://img.shields.io/github/issues/nnonickreal/OpenQore?style=for-the-badge" alt="Issues"></a>
 </p>
 
+# important info!
+this project is divided into two parts:
+1. [openqore SDK](https://github.com/nnonickreal/openqore-sdk) - firmware SDK for soundcore headphones based on the bes2300p SoC
+2. qorepatcher - a patcher for the stock firmware of the headphones (this repository) <br>
+
+i also created a demo project - a DOOM port based on the [DOOMBuds](https://github.com/arin-s/DOOMBuds) project. check that out too! =)
+<h1 align="center">
+  qorepatcher
+</h1>
+
 <p align="center">
   <strong><a href="INDEX.md">📚 read the full documentation 📚</a></strong>
 </p>
@@ -27,6 +36,7 @@ this project was started with the soundcore life q35. if you want to help test o
 | model | chipset | status |
 | :--- | :--- | :--- |
 | soundcore life q35 | bes2300p | ✅ **supported** |
+| soundcore space one | bes1502x | ❌ *testing* |
 | soundcore life q30 | bes2300p | ❌ *WIP* |
 | soundcore life tune pro | bes2300p | ❌ *WIP* |
 | soundcore life tune | bes2300p | ❌ *WIP* |
@@ -41,11 +51,11 @@ openqore is just getting started. here's a rough plan of what's coming next:
 
 - [x] initial firmware patcher for sound replacement.
 - [x] unlock 48khz audio support for system sounds.
-- [ ] investigate and unlock stereo support for system sounds.
+- [x] investigate and unlock stereo support for system sounds.
 - [ ] implement patches for headphone name and mac address modification.
 - [ ] remove the low volume limiter/gate on the aux input on some models (jack connection).
 - [ ] create a user-friendly gui for the patcher.
-- [ ] reverse-engineer the ota (over-the-air) update protocol for wireless flashing.
+- [x] reverse-engineer the ota (over-the-air) update protocol for wireless flashing. (read faq)
 - [ ] document the firmware structure and key functions.
 - [ ] develop a library of community-created sound packs.
 
@@ -91,6 +101,14 @@ reading the flash via ota (over-the-air) is planned for a future update. (if it'
 **4. congrats!**
 
 you can find usage instructions [here](docs/USAGE.md)
+
+## faq
+<details>
+  <summary>1. why i can't flash the firmware via ota (over-the-air)?</summary>
+<br>
+  whilst the protocol for the over-the-air update was being examined, a related vulnerability was discovered, which has now been reported to Anker. once Anker gives the go-ahead to publish the final script, it will be posted here! i should point out that if you want to keep your headphones customisable via the openqore, you shouldn’t update. but it’s your choice – whether to remain vulnerable or enjoy full customisation. i’d also like to add that i wanted to implement vulnerability protection in the openqore SDK 
+</details>
+
 
 ## technical deep dive
 
