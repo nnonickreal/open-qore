@@ -1,7 +1,7 @@
 <h1 align="center">
   openqore
-  <br>
-  <img src=".github/open-qore-logo.png" width="50" alt="open-qore logo"> 
+  <!-- <br> -->
+  <!-- <img src=".github/open-qore-logo.png" width="50" alt="open-qore logo">  -->
 </h1>
 <p>⚠️ flashing instructions are restricted while there is a pending response regarding a discovered security vulnerability!!!</p>
 
