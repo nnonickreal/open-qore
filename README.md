@@ -156,7 +156,7 @@ don't forget to give the project a star! thanks again!
 
 <p align="left">
   <a href="https://t.me/nnonick" target="_blank"><img src="https://img.shields.io/badge/telegram-%40nnonick-2CA5E0?style=for-the-badge&logo=telegram" alt="telegram"></a>
-  <a href="https://discord.gg/tQmc5qgfEg" target="_blank"><img src="https://img.shields.io/badge/discord-join_chat-5865F2?style=for-the-badge&logo=discord" alt="discord server"></a>
+  <a href="https://discord.gg/EPjhKzUHVq" target="_blank"><img src="https://img.shields.io/badge/discord-join_chat-5865F2?style=for-the-badge&logo=discord" alt="discord server"></a>
 </p>
 
 ## ❤️ support the project
