@@ -53,6 +53,7 @@ openqore is just getting started. here's a rough plan of what's coming next:
 - [x] initial firmware patcher for sound replacement.
 - [x] unlock 48khz audio support for system sounds.
 - [x] investigate and unlock stereo support for system sounds.
+- [ ] make patcher to work with all (or the most) bes chipsets
 - [ ] implement patches for headphone name and mac address modification.
 - [ ] remove the low volume limiter/gate on the aux input on some models (jack connection).
 - [ ] create a user-friendly gui for the patcher.
