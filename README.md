@@ -108,7 +108,7 @@ you can find usage instructions [here](docs/USAGE.md)
 <details>
   <summary>1. why i can't flash the firmware via ota (over-the-air)?</summary>
 <br>
-  whilst the protocol for the over-the-air update was being examined, a related vulnerability was discovered, which has now been reported to Anker. once Anker gives the go-ahead to publish the final script, it will be posted here! i should point out that if you want to keep your headphones customisable via the openqore, you shouldn’t update. but it’s your choice – whether to remain vulnerable or enjoy full customisation. i’d also like to add that i wanted to implement vulnerability protection in the openqore SDK.
+  whilst the protocol for the over-the-air update was being examined, a related vulnerability was discovered, which has now been reported to Anker. once Anker gives the go-ahead to publish the final script, it will be posted here! i should point out that if you want to keep your headphones customisable via the openqore, you shouldn’t update. but it’s your choice – whether to remain vulnerable or enjoy full customisation. i’d also like to add that i wanted to implement vulnerability protection in the openqore SDK. **keep an eye on the status of the one-click ota firmware script on the [openqore discord server](https://discord.gg/EPjhKzUHVq)!**
 </details>
 <details>
   <summary>2. which option of the firmware (w/o ota boot or with it) in the qorepatcher i should select?</summary>
