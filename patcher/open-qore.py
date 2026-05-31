@@ -462,7 +462,7 @@ def print_menu():
     print()
 
 def get_base_address() -> int:
-    print("\nwhich firmware do you have?")
+    print("\nwhich firmware do you have? (read https://github.com/nnonickreal/openqore#faq)")
     print("  1. without ota boot (+18000 to offset, base 0x3c018000)")
     print("  2. with ota boot (base 0x3c000000)")
     while True:
