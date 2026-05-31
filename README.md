@@ -1,7 +1,7 @@
 <h1 align="center">
   openqore
-  <!-- <br> -->
-  <!-- <img src=".github/open-qore-logo.png" width="50" alt="open-qore logo">  -->
+  <br>
+  <img src=".github/open-qore-logo.png" width="40" alt="open-qore logo"> 
 </h1>
 
 an open-source toolkit to patch, modify, and enhance the firmware of soundcore q-series headphones, with future support for other models planned.
@@ -40,6 +40,7 @@ this project was started with the soundcore life q35. if you want to help test o
 | soundcore life q30 | bes2300p | ❌ *WIP* |
 | soundcore life tune pro | bes2300p | ❌ *WIP* |
 | soundcore life tune | bes2300p | ❌ *WIP* |
+
 
 **support for other models is a future goal!**
 
