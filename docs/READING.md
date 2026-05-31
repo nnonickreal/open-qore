@@ -1,6 +1,6 @@
 # reading the flash (tested on bes2300p/1502x)
 
-alright, you've connected to the uart interface.
+alright, you've [connected to the uart interface.](UART_CONNECT.md)
 first of all, you need to install the [bestool by ralim](https://github.com/ralim/bestool).
 
 **the next instructions are simple:**
