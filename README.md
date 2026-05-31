@@ -57,7 +57,7 @@ openqore is just getting started. here's a rough plan of what's coming next:
 - [ ] implement patches for headphone name and mac address modification.
 - [ ] remove the low volume limiter/gate on the aux input on some models (jack connection).
 - [ ] create a user-friendly gui for the patcher.
-- [x] reverse-engineer the ota (over-the-air) update protocol for wireless flashing. (read [faq](https://github.com/nnonickreal/openqore#faq))
+- [x] reverse-engineer the ota (over-the-air) update protocol for wireless flashing. (read [faq](#faq))
 - [ ] document the firmware structure and key functions.
 - [ ] develop a library of community-created sound packs.
 
@@ -108,9 +108,17 @@ you can find usage instructions [here](docs/USAGE.md)
 <details>
   <summary>1. why i can't flash the firmware via ota (over-the-air)?</summary>
 <br>
-  whilst the protocol for the over-the-air update was being examined, a related vulnerability was discovered, which has now been reported to Anker. once Anker gives the go-ahead to publish the final script, it will be posted here! i should point out that if you want to keep your headphones customisable via the openqore, you shouldn’t update. but it’s your choice – whether to remain vulnerable or enjoy full customisation. i’d also like to add that i wanted to implement vulnerability protection in the openqore SDK 
+  whilst the protocol for the over-the-air update was being examined, a related vulnerability was discovered, which has now been reported to Anker. once Anker gives the go-ahead to publish the final script, it will be posted here! i should point out that if you want to keep your headphones customisable via the openqore, you shouldn’t update. but it’s your choice – whether to remain vulnerable or enjoy full customisation. i’d also like to add that i wanted to implement vulnerability protection in the openqore SDK.
 </details>
+<details>
+  <summary>2. which option of the firmware (w/o ota boot or with it) in the qorepatcher i should select?</summary>
+<br>
+  if you're patching the flash dump of the headphones, select the "with ota boot" option.
+  
+  if you have downloaded the ota update image from the official update servers, select the "without ota boot" option
 
+  **note:** if you have patched the firmware without ota boot, you need to [add it on the header of the patched firmware](docs/OTABOOT.md) before [flashing](docs/FLASHING.md)
+</details>
 
 ## technical deep dive
 
