@@ -130,7 +130,9 @@ this section contains some of the initial findings from reverse-engineering the 
 #### having fun with engineering modes and features
 the headphones have several hidden test modes. some of them could be useful for future updates or debugging.
 
-*   **engineering mode:** to enter this mode, hold the power button, connect the headphones to a pc via usb-c *before* they turn on, and wait for them to power up. once connected via bluetooth, the headphones will expose two serial com ports. one of them is writable. so far, the only function i've managed to trigger through this port is a **UFR** (explanation below). this seems to be a security measure, as it was triggered by brute-forcing various hex codes rather than a specific command. interestingly, this is not the standard reset (power + vol+) but something different.
+*   **engineering mode:** to enter this mode, hold the power button, connect the headphones to a pc via usb-c *before* they turn on, and wait for them to power up.
+
+*   **rfcomm:** the headphones have two serial com ports. one of them is writable. so far, the only function i've managed to trigger through this port is a **UFR** (explanation below). this seems to be a security measure, as it was triggered by brute-forcing various hex codes rather than a specific command. interestingly, this is not the standard reset (power + vol+) but something different.
 
 *   **testing mode:** this mode is entered similarly to engineering mode, but you need to release the power button immediately after the white led flashes for the first time, **before the blue light**. the headphones will then appear on the pc as a device with a "device descriptor request failed" error. you can confirm you're in this mode by the white led, which blinks faster than usual. its purpose is likely related to firmware flashing. also, in this mode, the headphones can be powered on while charging!
 
