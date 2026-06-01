@@ -136,17 +136,17 @@ the headphones have several hidden test modes. some of them could be useful for 
 
 *   **testing mode:** this mode is entered similarly to engineering mode, but you need to release the power button immediately after the white led flashes for the first time, **before the blue light**. the headphones will then appear on the pc as a device with a "device descriptor request failed" error. you can confirm you're in this mode by the white led, which blinks faster than usual. its purpose is likely related to firmware flashing. also, in this mode, the headphones can be powered on while charging!
 
-*   **undocumented factory reset (UFR):** a hidden factory reset can be triggered by rapidly pressing the power button multiple times while the device is powered on or sending something on virtual com port (above). this will cause the firmware to hang and then force a reboot after about 30 seconds. note that this action will erase all user data, including equalizer settings, bluetooth pairings, and other configurations.
+*   **undocumented factory reset (UFR):** a hidden factory reset can be triggered by rapidly pressing the power button multiple times while the headphones are powered on or sending something on virtual com port (above). this will cause the firmware to hang and then force a reboot after about 30 seconds. note that this action will erase all user data, including equalizer settings, bluetooth pairings, and other configurations.
 
 #### firmware structure
 the firmware appears to be a monolithic binary divided into multiple sections. each critical section is protected by a `crc32` checksum. future patchers will automatically recalculate these checksums after any modification to prevent boot failures.
 
 #### audio system
 *   **stock:** the original system sounds are stored as `16khz, mono, SBC` audio streams.
-*   **modded:** by patching the functions responsible for initializing the audio dac, it's possible to force the system to play back audio at `48khz`. this significantly improves the quality of custom sounds. stereo support is a work-in-progress (wip).
+*   **modded:** by patching the functions responsible for initializing the audio dac, it's possible to force the system to play back audio at `48khz, stereo`. this significantly improves the quality of custom sounds.
 
 #### key components & interfaces
-*   **chipset:** the heart of the q35 is a bestechnic (bes, best) `bes2300p` soc. a datasheet can be found with some googling.
+*   **chipset:** the heart of the q35 is a bestechnic (bes, best) `bes2300p` soc. a datasheet can be found with searching.
 *   **debug port:** a `uart` serial port is available on the pcb, which was used for initial debugging and is the primary method for unbricking a device after a bad flash. the `bes2300p` chip itself has two uart ports, but only one of them is exposed as easily accessible pads on the pcb.
 
 </details>
