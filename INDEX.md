@@ -10,4 +10,4 @@ welcome to the documentation for openqore. here you'll find all the guides and t
 - [communication with the bootloader](docs/BOOT_COM.md)
 
 ## for developers
-- [contributing guide](docs/CONTRIBUTING.md)
+- [contributing guide](README.md#contributing)
