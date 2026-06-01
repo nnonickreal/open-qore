@@ -20,7 +20,7 @@ this project is divided into two parts:
 1. [openqore SDK](https://github.com/nnonickreal/openqore-sdk) - firmware SDK for soundcore headphones based on the bes2300p SoC
 2. qorepatcher - a patcher for the stock firmware of the headphones (this repository) <br>
 
-i also created a demo project - a DOOM port based on the [DOOMBuds](https://github.com/arin-s/DOOMBuds) project. check that out too! =)
+i also created a demo project - a [DOOM port](https://github.com/nnonickreal/DOOMcore) based on the [DOOMBuds](https://github.com/arin-s/DOOMBuds) project. check that out too! =)
 <h1 align="center">
   qorepatcher
 </h1>
