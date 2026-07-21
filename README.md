@@ -36,15 +36,15 @@ this project was started with the soundcore life q35. if you want to help test o
 | model | chipset | status |
 | :--- | :--- | :--- |
 | soundcore life q35 | bes2300p | ✅ **supported** |
-| soundcore space one | bes1502x | ❌ *testing* |
-| soundcore life q30 | bes2300p | ❌ *WIP* |
-| soundcore life tune pro | bes2300p | ❌ *WIP* |
-| soundcore life tune | bes2300p | ❌ *WIP* |
-
+| soundcore life q30 | bes2300p | ❔ *should work but needs testing* |
+| soundcore life tune pro | bes2300p | ❔ *should work but needs testing* |
+| soundcore life tune | bes2300p | ❔ *should work but needs testing* |
+| soundcore life q20i | bes2300p | ❔ *should work but needs testing* |
+| soundcore space one | bes1502x | ❌ *WIP* |
 
 **support for other models is a future goal!**
 
-> **note:** devices based on the `bes2300p` chipset are the most likely candidates for future support.
+> **note:** devices based on the `bes2300*, bes1502*, bes1600` chipsets are the most likely candidates for future support.
 
 ## roadmap
 
@@ -53,11 +53,12 @@ openqore is just getting started. here's a rough plan of what's coming next:
 - [x] initial firmware patcher for sound replacement.
 - [x] unlock 48khz audio support for system sounds.
 - [x] investigate and unlock stereo support for system sounds.
+- [x] make patcher to work with all bes2300 chipsets (**warning! needs testing**)
 - [ ] make patcher to work with all (or the most) bes chipsets
 - [ ] implement patches for headphone name and mac address modification.
 - [ ] remove the low volume limiter/gate on the aux input on some models (jack connection).
 - [ ] create a user-friendly gui for the patcher.
-- [x] reverse-engineer the ota (over-the-air) update protocol for wireless flashing. (read [faq](#faq))
+- [x] reverse-engineer the ota (over-the-air) update protocol for wireless flashing.
 - [ ] document the firmware structure and key functions.
 - [ ] develop a library of community-created sound packs.
 
@@ -65,38 +66,35 @@ openqore is just getting started. here's a rough plan of what's coming next:
 
 this guide assumes you have `python` and `git` installed on your system.
 
-**1. clone the repository**
-
-open your terminal and run this command:
-```
-git clone https://github.com/nnonickreal/open-qore.git
-```
+**1. download and extract the zip archive from [releases](https://github.com/nnonickreal/openqore/releases/latest)**
 
 **2. install dependencies**
 
-the patcher requires ffmpeg for audio conversion:
+the patcher requires ffmpeg for audio conversion and pybluez:
 
 **windows:** 
-download [here](https://ffmpeg.org/download.html) or:
 ```
+pip install git+https://github.com/pybluez/pybluez.git
 winget install ffmpeg
 ```
 
 **macos:**
 ```
+pip install git+https://github.com/pybluez/pybluez.git
 brew install ffmpeg
 ```
 
 **ubuntu/debian:**
 ```
+pip install git+https://github.com/pybluez/pybluez.git
 sudo apt install ffmpeg
 ```
 
 **3. get your firmware file**
 
-this is the hardest part. currently, you need to dump the flash memory using a hardware method. a detailed guide for connecting a uart adapter is available here:
+you can download the OTA image [here](https://github.com/nnonickreal/openqore/blob/main/docs/FIRMWARES.md) or read the flash with UART:
 
-[➡️ hardware guide: connecting via uart](docs/UART_CONNECT.md)
+[➡️ hardware guide: connecting via UART](docs/UART_CONNECT.md)
 
 reading the flash via ota (over-the-air) is planned for a future update. (if it's possible :D)
 
@@ -106,18 +104,13 @@ you can find usage instructions [here](docs/USAGE.md)
 
 ## faq
 <details>
-  <summary>1. why i can't flash the firmware via ota (over-the-air)?</summary>
-<br>
-  whilst the protocol for the over-the-air update was being examined, a related vulnerability was discovered, which has now been reported to Anker. once Anker gives the go-ahead to publish the final script, it will be posted here! i should point out that if you want to keep your headphones customisable via the openqore, you shouldn’t update. but it’s your choice – whether to remain vulnerable or enjoy full customisation. i’d also like to add that i wanted to implement vulnerability protection in the openqore SDK. keep an eye on the status of the one-click ota firmware script on the <a href=https://discord.gg/EPjhKzUHVq>openqore discord server!</a>
-</details>
-<details>
-  <summary>2. which option of the firmware (w/o ota boot or with it) in the qorepatcher i should select?</summary>
+  <summary>1. which option of the firmware (w/o ota boot or with it) in qorepatcher i should select?</summary>
 <br>
   if you're patching the flash dump of the headphones, select the "with ota boot" option.
   
   if you have downloaded the ota update image from the official update servers, select the "without ota boot" option
 
-  **note:** if you have patched the firmware without ota boot, you need to [add it on the header of the patched firmware](docs/OTABOOT.md) before [flashing](docs/FLASHING.md)
+  **note:** if you have patched the firmware without ota boot, you need to [add it on the header of the patched firmware](docs/OTABOOT.md) before [flashing via UART.](docs/FLASHING.md) you do **NOT** need this if you're using the [besota](https://github.com/nnonickreal/besota) script!
 </details>
 
 ## technical deep dive
