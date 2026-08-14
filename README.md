@@ -31,7 +31,7 @@ i also created a demo project - a [DOOM port](https://github.com/nnonickreal/DOO
 
 ## supported devices
 
-this project was started with the soundcore life q35. if you want to help test or add support for a new model, please open an issue!
+this project was started with the soundcore life q35. if you want to help test or add support for a new model, please open an issue or DM me (read [contact](#contact--community))!
 
 | model | chipset | status |
 | :--- | :--- | :--- |
@@ -47,8 +47,6 @@ this project was started with the soundcore life q35. if you want to help test o
 > **note:** devices based on the `bes2300*, bes1502*, bes1600` chipsets are the most likely candidates for future support.
 
 ## roadmap
-
-openqore is just getting started. here's a rough plan of what's coming next:
 
 - [x] initial firmware patcher for sound replacement.
 - [x] unlock 48khz audio support for system sounds.
