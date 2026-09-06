@@ -1,6 +1,6 @@
-# flashing guide
+# flashing guide (Q35)
 
-first of all, you need to install the [bestool by ralim](https://github.com/ralim/bestool) and [**read (backup) the flash!**](https://github.com/nnonickreal/openqore/blob/main/docs/READING.md)
+first of all, you need to install [bestool-ng](https://github.com/nnonickreal/bestool-ng) and [**read (backup) the flash!**](https://github.com/nnonickreal/openqore/blob/main/docs/READING_Q35.md)
 
 the steps are just as simple as the reading guide:
 1. turn off the headphones
