@@ -6,7 +6,7 @@
 
 an open-source toolkit to patch, modify, and enhance the firmware of soundcore q-series headphones, with future support for other models planned.
 
-> **note:** this project is my personal journey into the world of hardware reverse-engineering and embedded systems. it was created by a teenager and i'm learning as i go. expect bugs, mistakes, and lots of fun. all contributions and advice are welcome!
+> **note:** this project is my personal journey into the world of hardware reverse-engineering and embedded systems. expect bugs, mistakes, and lots of fun. all contributions and advice are welcome!
 
 <p align="center">
   <a href="https://github.com/nnonickreal/OpenQore"><img src="https://img.shields.io/badge/status-in%20development-orange?style=for-the-badge" alt="Status"></a>
@@ -15,10 +15,14 @@ an open-source toolkit to patch, modify, and enhance the firmware of soundcore q
   <a href="https://github.com/nnonickreal/OpenQore/issues"><img src="https://img.shields.io/github/issues/nnonickreal/OpenQore?style=for-the-badge" alt="Issues"></a>
 </p>
 
-# important info!
-this project is divided into two parts:
-1. [openqore SDK](https://github.com/nnonickreal/openqore-sdk) - firmware SDK for soundcore headphones based on the bes2300p SoC
-2. qorepatcher - a patcher for the stock firmware of the headphones (this repository) <br>
+# important info! (fast navigation)
+**do you want to:**
+
+* patch your headphones' firmware? -> qorepatcher (this repository, look below for quick start)
+* install / develop the custom firmware? (`soundcore devices based on bes2300p` only at the moment) -> [openqore SDK](https://github.com/nnonickreal/openqore-sdk)
+* flash an update / install custom firmware over-the-air? (OTA) -> [OTA files for BES devices](https://github.com/nnonickreal/openqore/blob/main/docs/FIRMWARES.md) and [besota](https://github.com/nnonickreal/besota) - BES OTA flasher
+* flash an update via UART / restore after a bad update or make a backup? -> [hardware flashing guide](https://github.com/nnonickreal/openqore/blob/main/docs/FLASH_MP.md)
+
 
 i also created a demo project - a [DOOM port](https://github.com/nnonickreal/DOOMcore) based on the [DOOMBuds](https://github.com/arin-s/DOOMBuds) project. check that out too! =)
 <h1 align="center">
@@ -92,7 +96,7 @@ sudo apt install ffmpeg
 
 you can download the OTA image [here](https://github.com/nnonickreal/openqore/blob/main/docs/FIRMWARES.md) or read the flash with UART:
 
-[➡️ hardware guide: connecting via UART](docs/UART_CONNECT.md)
+[➡️ hardware guide: connecting via UART](docs/FLASHING_MP.md)
 
 reading the flash via ota (over-the-air) is planned for a future update. (if it's possible :D)
 
@@ -118,7 +122,7 @@ you can find usage instructions [here](docs/USAGE.md)
 
 this section contains some of the initial findings from reverse-engineering the q35 firmware.
 
-#### having fun with engineering modes and features
+#### engineering modes and features
 the headphones have several hidden test modes. some of them could be useful for future updates or debugging.
 
 *   **engineering mode:** to enter this mode, hold the power button, connect the headphones to a pc via usb-c *before* they turn on, and wait for them to power up.
@@ -130,14 +134,14 @@ the headphones have several hidden test modes. some of them could be useful for 
 *   **undocumented factory reset (UFR):** a hidden factory reset can be triggered by rapidly pressing the power button multiple times while the headphones are powered on or sending something on virtual com port (above). this will cause the firmware to hang and then force a reboot after about 30 seconds. note that this action will erase all user data, including equalizer settings, bluetooth pairings, and other configurations.
 
 #### firmware structure
-the firmware appears to be a monolithic binary divided into multiple sections. each critical section is protected by a `crc32` checksum. future patchers will automatically recalculate these checksums after any modification to prevent boot failures.
+the firmware appears to be a monolithic binary divided into multiple sections. each critical section is protected by a `CRC32` checksum. future patchers will automatically recalculate these checksums after any modification to prevent boot failures.
 
 #### audio system
 *   **stock:** the original system sounds are stored as `16khz, mono, SBC` audio streams.
 *   **modded:** by patching the functions responsible for initializing the audio dac, it's possible to force the system to play back audio at `48khz, stereo`. this significantly improves the quality of custom sounds.
 
 #### key components & interfaces
-*   **chipset:** the heart of the q35 is a bestechnic (bes, best) `bes2300p` soc. a datasheet can be found with searching.
+*   **chipset:** the heart of the q35 is a bestechnic (bes, best) `bes2300p` SoC. a datasheet can be found with searching.
 *   **debug port:** a `uart` serial port is available on the pcb, which was used for initial debugging and is the primary method for unbricking a device after a bad flash. the `bes2300p` chip itself has two uart ports, but only one of them is exposed as easily accessible pads on the pcb.
 
 </details>
@@ -172,10 +176,10 @@ if you find this project helpful and want to support its future development, you
 
 ## acknowledgements
 
-this project was brought to life with the extensive use of ai-powered coding assistants (like claude and chatgpt). while the core reverse-engineering, research, and architectural decisions were made by the author, ai played a crucial role in accelerating the development process, writing boilerplate code, and debugging.
+this project was brought to life with the extensive use of ai-powered coding assistants. while the core reverse-engineering, research, and architectural decisions were made by the author, ai played a crucial role in accelerating the development process, writing boilerplate code, and debugging.
 
 this is a modern project built with modern tools.
 
 ## license
 
-this project is licensed under the mit license. you can find the full license text in the [license](LICENSE) file.
+this project is licensed under the MIT license. you can find the full license text in the [license](LICENSE) file.
