@@ -1,4 +1,4 @@
-# connecting to the service port (Q35 uart)
+# connecting to the service port (Q35 UART)
 
 > **⚠️ critical warning: your uart adapter must be set to 1.8 volts!** using a 3.3v or 5v adapter will permanently damage the headphones' SoC.
 
