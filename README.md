@@ -96,7 +96,7 @@ sudo apt install ffmpeg
 
 you can download the OTA image [here](https://github.com/nnonickreal/openqore/blob/main/docs/FIRMWARES.md) or read the flash with UART:
 
-[➡️ hardware guide: connecting via UART](docs/FLASHING_MP.md)
+[➡️ hardware guide: connecting via UART](docs/FLASH_MP.md)
 
 reading the flash via ota (over-the-air) is planned for a future update. (if it's possible :D)
 
