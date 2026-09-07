@@ -4,7 +4,7 @@
   <img src=".github/open-qore-logo.png" width="40" alt="open-qore logo"> 
 </h1>
 
-an open-source toolkit to patch, modify, and enhance the firmware of soundcore q-series headphones, with future support for other models planned.
+an open-source toolkit to patch, modify, and enhance the firmware of headphones based on the BES chipsets (initially started from soundcore Q35), with future support for other models planned.
 
 > **note:** this project is my personal journey into the world of hardware reverse-engineering and embedded systems. expect bugs, mistakes, and lots of fun. all contributions and advice are welcome!
 
@@ -35,32 +35,17 @@ i also created a demo project - a [DOOM port](https://github.com/nnonickreal/DOO
 
 ## supported devices
 
-this project was started with the soundcore life q35. if you want to help test or add support for a new model, please open an issue or DM me (read [contact](#contact--community))!
+this project was started with the soundcore Life Q35. if you want to help test or add support for a new model, please open an issue or DM me (read [contact](#contact--community))!
 
-| model | chipset | status |
-| :--- | :--- | :--- |
-| soundcore life q35 | bes2300p | ✅ **supported** |
-| soundcore life q30 | bes2300p | ❔ *should work but needs testing* |
-| soundcore life tune pro | bes2300p | ❔ *should work but needs testing* |
-| soundcore life tune | bes2300p | ❔ *should work but needs testing* |
-| soundcore life q20i | bes2300p | ❔ *should work but needs testing* |
-| soundcore space one | bes1502x | ❌ *WIP* |
+read [roadmaps and models](https://github.com/nnonickreal/openqore/blob/main/docs/roadmaps/RMS.md) for chips & models support status.
 
-**support for other models is a future goal!**
-
-> **note:** devices based on the `bes2300*, bes1502*, bes1600` chipsets are the most likely candidates for future support.
-
-## roadmap
+### project roadmap
 
 - [x] initial firmware patcher for sound replacement.
-- [x] unlock 48khz audio support for system sounds.
-- [x] investigate and unlock stereo support for system sounds.
-- [x] make patcher to work with all bes2300 chipsets (**warning! needs testing**)
+- [x] make patcher to work with all bes2300* chipsets (**warning! needs testing**)
 - [ ] make patcher to work with all (or the most) bes chipsets
-- [ ] implement patches for headphone name and mac address modification.
-- [ ] remove the low volume limiter/gate on the aux input on some models (jack connection).
-- [ ] create a user-friendly gui for the patcher.
-- [x] reverse-engineer the ota (over-the-air) update protocol for wireless flashing.
+- [ ] create a user-friendly GUI for the patcher.
+- [x] reverse-engineer the OTA (over-the-air) update protocol for wireless flashing. (see [besota](https://github.com/nnonickreal/besota))
 - [ ] document the firmware structure and key functions.
 - [ ] develop a library of community-created sound packs.
 
@@ -106,13 +91,13 @@ you can find usage instructions [here](docs/USAGE.md)
 
 ## faq
 <details>
-  <summary>1. which option of the firmware (w/o ota boot or with it) in qorepatcher i should select?</summary>
+  <summary>1. which option of the firmware (w/o OTA boot or with it) in qorepatcher i should select?</summary>
 <br>
-  if you're patching the flash dump of the headphones, select the "with ota boot" option.
+  if you're patching the flash dump of the headphones, select the "with OTA boot" option.
   
-  if you have downloaded the ota update image from the official update servers, select the "without ota boot" option
+  if you have downloaded the OTA update image from the official update servers, select the "without OTA boot" option
 
-  **note:** if you have patched the firmware without ota boot, you need to [add it on the header of the patched firmware](docs/OTABOOT.md) before [flashing via UART.](docs/FLASHING.md) you do **NOT** need this if you're using the [besota](https://github.com/nnonickreal/besota) script!
+  **note:** if you have patched the firmware without OTA boot, you need to [add it on the header of the patched firmware](docs/OTABOOT.md) before [flashing via UART.](docs/FLASHING.md) you do **NOT** need this if you're using the [besota](https://github.com/nnonickreal/besota) script!
 </details>
 
 ## technical deep dive
