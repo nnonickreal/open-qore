@@ -1,9 +1,9 @@
 # reading / flashing
 
-* [reading universal guide](READING.MD)
+* [reading universal guide](READING.md)
 
 
-* [flashing universal guide](FLASHING.MD)
+* [flashing universal guide](FLASHING.md)
 
 ## custom instructions
 if your headphones aren't on this list, use the universal guide
