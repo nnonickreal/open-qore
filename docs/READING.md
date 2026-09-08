@@ -7,6 +7,7 @@ first of all, you need to install [bestool-ng](https://github.com/nnonickreal/be
 **the next instructions are simple:**
 1. turn off the headphones.
 2. run bestool with the read-image option, specifying your uart adapter and offsets (will be available soon)
-3. bestool should indicate that the chip is in the bootloader mode and that the flash memory is being read
+3. while bestool is sending packets, press the power button on your headphones
+4. bestool should indicate that the chip is in the bootloader mode and that the flash memory is being read
 
 congratulations! you have read the flash and are ready to start [flashing](https://github.com/nnonickreal/openqore/blob/main/docs/FLASHING.md) c:
