@@ -4,7 +4,7 @@
   <img src=".github/open-qore-logo.png" width="40" alt="open-qore logo"> 
 </h1>
 
-an open-source toolkit to patch, modify, and enhance the firmware of headphones based on the BES chipsets (initially started from soundcore Q35), with future support for other models planned.
+an open-source toolkit to patch, modify, and enhance the firmware of headphones based on the BES chipsets (originally started from the soundcore Q35), with future support for other models planned.
 
 > **note:** this project is my personal journey into the world of hardware reverse-engineering and embedded systems. expect bugs, mistakes, and lots of fun. all contributions and advice are welcome!
 
